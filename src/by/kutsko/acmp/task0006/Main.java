@@ -17,14 +17,12 @@ public class Main {
 
         Scanner dataFromFile = new Scanner(Paths.get(URL + "/input.txt"), "UTF-8");
         //Scanner dataFromFile = new Scanner(new File("input.txt"));
-        //Scanner dataFromFile = new Scanner(System.in);
+
         String strFromFile = dataFromFile.nextLine();
         dataFromFile.close();
 
         PrintWriter printWriter = new PrintWriter(URL + "/output.txt", "UTF-8");
         //PrintWriter printWriter = new PrintWriter(new File("output.txt"));
-        //PrintWriter printWriter = new PrintWriter(System.out);
-
 
         StringBuilder sb = new StringBuilder();
 

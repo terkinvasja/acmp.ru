@@ -1,5 +1,6 @@
 package by.kutsko.acmp.task0009;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Paths;
@@ -16,13 +17,11 @@ public class Main {
 
         Scanner dataFromFile = new Scanner(Paths.get(URL + "/input.txt"), "UTF-8");
         //Scanner dataFromFile = new Scanner(new File("input.txt"));
-        //Scanner dataFromFile = new Scanner(System.in);
 
         PrintWriter printWriter = new PrintWriter(URL + "/output.txt", "UTF-8");
         //PrintWriter printWriter = new PrintWriter(new File("output.txt"));
-        //PrintWriter printWriter = new PrintWriter(System.out);
 
-        int size = dataFromFile.nextInt();
+        int size = Integer.valueOf(dataFromFile.nextLine());
         int[] arrayNumbers = new int[size];
 
         for (int i = 0; i < arrayNumbers.length; i++) {
@@ -66,9 +65,9 @@ public class Main {
             op = op * arrayNumbers[i];
         }
 
-        System.out.println("summa: " + sum);
+/*        System.out.println("summa: " + sum);
         System.out.println("op: " + op);
-        System.out.println("indexMin: " + indexMin + ", min: " + min + "; indexMax: " + indexMax + ", max: " + max);
+        System.out.println("indexMin: " + indexMin + ", min: " + min + "; indexMax: " + indexMax + ", max: " + max);*/
 
         StringBuilder sb = new StringBuilder();
         sb.append(sum);

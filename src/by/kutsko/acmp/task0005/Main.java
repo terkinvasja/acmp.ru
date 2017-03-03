@@ -1,6 +1,7 @@
 package by.kutsko.acmp.task0005;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -8,20 +9,19 @@ import java.util.Scanner;
  */
 public class Main {
 
-    //private static String URL = System.getProperty("user.dir") + "/src/by/kutsko/acmp/task0005";
+    private static String URL = System.getProperty("user.dir") + "/src/by/kutsko/acmp/task0005";
 
     public static void main(String[] args) throws IOException {
 
-        //BufferedReader inFileStream = new BufferedReader(new FileReader(URL + "/input.txt"));
-        //BufferedReader inFileStream = new BufferedReader(new InputStreamReader(System.in));
-        Scanner scanner = new Scanner(System.in);
+        Scanner dataFromFile = new Scanner(Paths.get(URL + "/input.txt"), "UTF-8");
+        //Scanner dataFromFile = new Scanner(new File("input.txt"));
 
         /*int n = Integer.valueOf(inFileStream.readLine());
         String[] arrayNumbersStr = inFileStream.readLine().split(" ");
         inFileStream.close();*/
-        int n = Integer.valueOf(scanner.nextLine());
-        String[] arrayNumbersStr = scanner.nextLine().split(" ");
-        scanner.close();
+        int n = Integer.valueOf(dataFromFile.nextLine());
+        String[] arrayNumbersStr = dataFromFile.nextLine().split(" ");
+        dataFromFile.close();
 
         int[] arrayOddDays = new int[n];
         int[] arrayEvenDays = new int[n];
@@ -59,8 +59,8 @@ public class Main {
             sb.append("NO");
         }
 
-        //PrintWriter printWriter = new PrintWriter(URL + "/output.txt", "UTF-8");
-        PrintWriter printWriter = new PrintWriter(System.out);
+        PrintWriter printWriter = new PrintWriter(URL + "/output.txt", "UTF-8");
+        //PrintWriter printWriter = new PrintWriter(new File("output.txt"));
         printWriter.write(sb.toString());
         printWriter.close();
 
