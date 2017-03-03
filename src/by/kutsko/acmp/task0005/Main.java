@@ -8,11 +8,11 @@ import java.util.Scanner;
  */
 public class Main {
 
-    //private static String URL = System.getProperty("user.dir") + "/src/by/kutsko/acmp";
+    //private static String URL = System.getProperty("user.dir") + "/src/by/kutsko/acmp/task0005";
 
     public static void main(String[] args) throws IOException {
 
-        //BufferedReader inFileStream = new BufferedReader(new FileReader(URL + "/task0005/input.txt"));
+        //BufferedReader inFileStream = new BufferedReader(new FileReader(URL + "/input.txt"));
         //BufferedReader inFileStream = new BufferedReader(new InputStreamReader(System.in));
         Scanner scanner = new Scanner(System.in);
 
@@ -59,7 +59,7 @@ public class Main {
             sb.append("NO");
         }
 
-        //PrintWriter printWriter = new PrintWriter(URL + "/task0005/output.txt", "UTF-8");
+        //PrintWriter printWriter = new PrintWriter(URL + "/output.txt", "UTF-8");
         PrintWriter printWriter = new PrintWriter(System.out);
         printWriter.write(sb.toString());
         printWriter.close();

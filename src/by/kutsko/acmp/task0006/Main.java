@@ -11,17 +11,17 @@ import java.util.Scanner;
  */
 public class Main {
 
-    private static String URL = System.getProperty("user.dir") + "/src/by/kutsko/acmp";
+    private static String URL = System.getProperty("user.dir") + "/src/by/kutsko/acmp/task0006";
 
     public static void main(String[] args) throws IOException {
 
-        Scanner dataFromFile = new Scanner(Paths.get(URL + "/task0006/input.txt"), "UTF-8");
+        Scanner dataFromFile = new Scanner(Paths.get(URL + "/input.txt"), "UTF-8");
         //Scanner dataFromFile = new Scanner(new File("input.txt"));
         //Scanner dataFromFile = new Scanner(System.in);
         String strFromFile = dataFromFile.nextLine();
         dataFromFile.close();
 
-        PrintWriter printWriter = new PrintWriter(URL + "/task0006/output.txt", "UTF-8");
+        PrintWriter printWriter = new PrintWriter(URL + "/output.txt", "UTF-8");
         //PrintWriter printWriter = new PrintWriter(new File("output.txt"));
         //PrintWriter printWriter = new PrintWriter(System.out);
 
