@@ -20,21 +20,26 @@ public class Main {
         //PrintWriter printWriter = new PrintWriter(new File("output.txt"));
 
         int size = Integer.valueOf(dataFromFile.nextLine().trim());
-        String data = dataFromFile.nextLine().trim().substring(0, (size * 2) - 3);
+        if (size < 2) {
+            dataFromFile.close();
+            printWriter.close();
+        } else {
+            String data = dataFromFile.nextLine().trim().substring(0, (size * 2) - 3);
 
-        dataFromFile.close();
+            dataFromFile.close();
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(data);
-        sb.append(" ");
-        sb.append(data);
+            StringBuilder sb = new StringBuilder();
+            sb.append(data);
+            sb.append(" ");
+            sb.append(data);
 
-        String d = sb.substring(2);
+            String d = sb.substring(2);
 
-        int result = d.indexOf(data)/2 + 1;
+            int result = d.indexOf(data) / 2 + 1;
 
-        System.out.println(result);
-        printWriter.write(String.valueOf(result));
-        printWriter.close();
+            System.out.println(result);
+            printWriter.write(String.valueOf(result));
+            printWriter.close();
+        }
     }
 }
