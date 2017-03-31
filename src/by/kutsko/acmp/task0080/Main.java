@@ -42,7 +42,7 @@ public class Main {
 
                 switch (state) {
                     case 0: {
-                        if ((int) data.charAt(i) == 45) {
+                        if (data.charAt(i) == '-') {
                             sbNumber1.append(data.charAt(i));
                             state = 1;
                         } else {
@@ -83,7 +83,7 @@ public class Main {
                         break;
                     }
                     case 3: {
-                        if ((int) data.charAt(i) == 45) {
+                        if (data.charAt(i) == '-') {
                             sbNumber2.append(data.charAt(i));
                             state = 4;
                         } else {
@@ -161,7 +161,7 @@ public class Main {
 //            System.out.println(String.format("state = %d", state));
             }
 
-            if (!result.equals("ERROR")) {
+            if (!result.equals("ERROR") && state == 7) {
                 if (znak == '+') {
                     result = (number1 + number2 == number3) ? "YES" : "NO";
                 } else if (znak == '-') {
@@ -173,6 +173,8 @@ public class Main {
                         result = "NO";
                     } else result = (number1 / number2 == number3 && number1 % number2 == 0) ? "YES" : "NO";
                 }
+            } else {
+                result = "ERROR";
             }
             System.out.println(String.format("%d%c%d=%d", number1, znak, number2, number3));
         } else {
